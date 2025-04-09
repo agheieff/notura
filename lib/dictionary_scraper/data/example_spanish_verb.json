@@ -1,0 +1,136 @@
+{
+  "hablar": {
+    "text": "hablar",
+    "language_code": "es",
+    "word_class": "verb",
+    "translations": {
+      "en": ["to speak", "to talk"],
+      "fr": ["parler"],
+      "de": ["sprechen", "reden"]
+    },
+    "ipa_transcriptions": ["a.ˈβlaɾ"],
+    "definitions": [
+      "to speak, to talk",
+      "to discuss, to have a conversation",
+      "to express oneself in a certain language"
+    ],
+    "examples": [
+      "Me gusta hablar español.",
+      "Él habla demasiado."
+    ],
+    "etymology": "From Old Spanish fablar, from Latin fābulārī ('to speak, chat'), from fābula ('conversation, story').",
+    "word_forms": {
+      "indicative": {
+        "present": {
+          "1sg": "hablo",
+          "2sg": "hablas",
+          "3sg": "habla",
+          "1pl": "hablamos",
+          "2pl": "habláis",
+          "3pl": "hablan"
+        },
+        "preterite": {
+          "1sg": "hablé",
+          "2sg": "hablaste",
+          "3sg": "habló",
+          "1pl": "hablamos",
+          "2pl": "hablasteis",
+          "3pl": "hablaron"
+        },
+        "imperfect": {
+          "1sg": "hablaba",
+          "2sg": "hablabas",
+          "3sg": "hablaba",
+          "1pl": "hablábamos",
+          "2pl": "hablabais",
+          "3pl": "hablaban"
+        },
+        "future": {
+          "1sg": "hablaré",
+          "2sg": "hablarás",
+          "3sg": "hablará",
+          "1pl": "hablaremos",
+          "2pl": "hablaréis",
+          "3pl": "hablarán"
+        },
+        "conditional": {
+          "1sg": "hablaría",
+          "2sg": "hablarías",
+          "3sg": "hablaría",
+          "1pl": "hablaríamos",
+          "2pl": "hablaríais",
+          "3pl": "hablarían"
+        }
+      },
+      "subjunctive": {
+        "present": {
+          "1sg": "hable",
+          "2sg": "hables",
+          "3sg": "hable",
+          "1pl": "hablemos",
+          "2pl": "habléis",
+          "3pl": "hablen"
+        },
+        "imperfect": {
+          "1sg": "hablara",
+          "2sg": "hablaras",
+          "3sg": "hablara",
+          "1pl": "habláramos",
+          "2pl": "hablarais",
+          "3pl": "hablaran"
+        },
+        "imperfect_alternate": {
+          "1sg": "hablase",
+          "2sg": "hablases",
+          "3sg": "hablase",
+          "1pl": "hablásemos",
+          "2pl": "hablaseis",
+          "3pl": "hablasen"
+        }
+      },
+      "imperative": {
+        "affirmative": {
+          "2sg": "habla",
+          "3sg": "hable",
+          "1pl": "hablemos",
+          "2pl": "hablad",
+          "3pl": "hablen"
+        },
+        "negative": {
+          "2sg": "no hables",
+          "3sg": "no hable",
+          "1pl": "no hablemos",
+          "2pl": "no habléis",
+          "3pl": "no hablen"
+        }
+      },
+      "non_finite": {
+        "infinitive": "hablar",
+        "gerund": "hablando",
+        "participle": {
+          "masculine": {
+            "singular": "hablado",
+            "plural": "hablados"
+          },
+          "feminine": {
+            "singular": "hablada",
+            "plural": "habladas"
+          }
+        }
+      },
+      "compound_tenses": {
+        "perfect": {
+          "1sg": "he hablado",
+          "2sg": "has hablado",
+          "3sg": "ha hablado",
+          "1pl": "hemos hablado",
+          "2pl": "habéis hablado",
+          "3pl": "han hablado"
+        }
+      }
+    },
+    "frequency": 95,
+    "difficulty": 1,
+    "tags": ["common", "regular", "first_conjugation"]
+  }
+}

@@ -1,0 +1,120 @@
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <h1 class="font-bold text-3xl">Welcome, <%= current_user.full_name.presence || current_user.email %></h1>
+  
+  <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Learning progress section -->
+    <div class="col-span-2 bg-white shadow rounded-lg p-6">
+      <h2 class="text-xl font-semibold mb-4">Your Language Learning Journey</h2>
+      
+      <% if @learning_languages.any? %>
+        <div class="space-y-6">
+          <% @learning_languages.each do |language| %>
+            <% profile_language = @profile.profile_languages.find_by(language: language) %>
+            <div class="border rounded-lg p-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-medium"><%= language.display_name %></h3>
+                <div class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">
+                  Learning
+                </div>
+              </div>
+              
+              <div class="mt-4 space-y-2">
+                <% %w[reading writing listening speaking].each do |skill| %>
+                  <div>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span class="font-medium capitalize"><%= skill %></span>
+                      <span><%= profile_language.proficiency_level[skill] %>/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                      <div class="bg-blue-600 h-2 rounded-full" style="width: <%= profile_language.proficiency_level[skill].to_f / 5 * 100 %>%"></div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              
+              <div class="mt-4 flex gap-2">
+                <%= link_to "Continue Learning", "#", class: "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700" %>
+                <%= link_to "Vocabulary", language_vocabulary_entries_path(language), class: "inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="text-center py-8">
+          <p class="text-gray-500">You haven't started learning any languages yet.</p>
+          <%= link_to "Start Learning", languages_path, class: "mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700" %>
+        </div>
+      <% end %>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="col-span-1 space-y-6">
+      <!-- Profile section -->
+      <div class="bg-white shadow rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">Profile</h2>
+        <div class="flex items-center">
+          <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center text-2xl text-gray-600">
+            <%= current_user.full_name&.first || current_user.email.first.upcase %>
+          </div>
+          <div class="ml-4">
+            <p class="font-medium"><%= @profile.username.presence || current_user.email %></p>
+            <p class="text-sm text-gray-500"><%= @native_languages.map(&:name).join(", ") %> speaker</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <%= link_to "Edit Profile", edit_profile_path, class: "text-sm text-blue-600 hover:text-blue-800" %>
+        </div>
+      </div>
+      
+      <!-- Vocabulary Review section -->
+      <div class="bg-white shadow rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">Vocabulary Review</h2>
+        <% due_entries = current_user.vocabulary_due_for_review.limit(5) %>
+        
+        <% if due_entries.any? %>
+          <ul class="divide-y divide-gray-200">
+            <% due_entries.each do |entry| %>
+              <li class="py-3">
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">
+                      <%= entry.vocabulary_entry.text %>
+                    </p>
+                    <p class="text-xs text-gray-500">
+                      <%= entry.vocabulary_entry.word_class.capitalize %> • 
+                      <%= entry.profile_language.language.display_name %>
+                    </p>
+                  </div>
+                  
+                  <%= link_to "Review", user_vocabulary_entry_path(entry), class: "text-sm text-blue-600 hover:text-blue-800" %>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+          
+          <div class="mt-4 text-center">
+            <%= link_to "See All", user_vocabulary_entries_path(due_for_review: true), class: "text-sm text-blue-600 hover:text-blue-800" %>
+          </div>
+        <% else %>
+          <div class="text-center py-4">
+            <p class="text-gray-500 text-sm">No vocabulary due for review.</p>
+            <p class="text-sm mt-1">
+              <%= link_to "Add new words", vocabulary_entries_path, class: "text-blue-600 hover:text-blue-800" %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+      
+      <!-- Quick links section -->
+      <div class="bg-white shadow rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">Quick Links</h2>
+        <nav class="space-y-2">
+          <%= link_to "Languages", languages_path, class: "block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100" %>
+          <%= link_to "Topics", topics_path, class: "block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100" %>
+          <%= link_to "Vocabulary", vocabulary_entries_path, class: "block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100" %>
+          <%= link_to "My Flashcards", user_vocabulary_entries_path, class: "block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100" %>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

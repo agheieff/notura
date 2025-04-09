@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile: one
+  language: one
+  proficiency_level: 
+  is_native: false
+  learning_active: false
+
+two:
+  profile: two
+  language: two
+  proficiency_level: 
+  is_native: false
+  learning_active: false

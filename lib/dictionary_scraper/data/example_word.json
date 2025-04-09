@@ -1,0 +1,33 @@
+{
+  "hello": {
+    "text": "hello",
+    "language_code": "en",
+    "word_class": "interjection",
+    "translations": {
+      "fr": ["bonjour", "salut"],
+      "es": ["hola"],
+      "de": ["hallo", "guten tag"]
+    },
+    "ipa_transcriptions": [
+      "həˈloʊ",
+      "hɛˈloʊ"
+    ],
+    "definitions": [
+      "Used as a greeting when meeting someone or when answering the telephone",
+      "An expression of surprise or a way of attracting attention"
+    ],
+    "examples": [
+      "Hello, how are you today?",
+      "Hello! I've been trying to get your attention."
+    ],
+    "synonyms": ["hi", "greetings", "hey"],
+    "antonyms": ["goodbye", "bye"],
+    "etymology": "From earlier hallo, hollo, from Old High German halâ, holâ ('bring, fetch')",
+    "forms": {
+      "plural": "hellos"
+    },
+    "frequency": 95,
+    "difficulty": 1,
+    "tags": ["greeting", "common", "formal", "informal"]
+  }
+}

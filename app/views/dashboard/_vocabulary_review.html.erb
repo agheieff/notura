@@ -1,0 +1,40 @@
+<div class="bg-white rounded-lg shadow overflow-hidden">
+  <div class="px-4 py-5 sm:px-6 flex justify-between items-center">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">Vocabulary Review</h3>
+    <%= link_to "See all", user_vocabulary_entries_path(due_for_review: true), class: "text-sm text-blue-600 hover:text-blue-900" %>
+  </div>
+  
+  <div class="border-t border-gray-200">
+    <% due_entries = current_user.vocabulary_due_for_review.limit(5) %>
+    
+    <% if due_entries.any? %>
+      <ul class="divide-y divide-gray-200">
+        <% due_entries.each do |entry| %>
+          <li class="px-4 py-4">
+            <div class="flex justify-between">
+              <div>
+                <p class="text-sm font-medium text-gray-900">
+                  <%= entry.vocabulary_entry.text %>
+                </p>
+                <p class="text-sm text-gray-500">
+                  <%= entry.vocabulary_entry.word_class.capitalize %> • 
+                  <%= entry.profile_language.language.display_name %>
+                </p>
+              </div>
+              
+              <%= link_to "Review", user_vocabulary_entry_path(entry), class: "inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="p-4 text-center text-gray-500">
+        <p>No vocabulary due for review.</p>
+        <p class="text-sm mt-1">
+          <%= link_to "Add new words", vocabulary_entries_path, class: "text-blue-600 hover:text-blue-900" %>
+          to your study list.
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>

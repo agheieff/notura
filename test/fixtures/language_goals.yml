@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile_language: one
+  topic: one
+  target_level: 1
+  target_date: 2025-04-09
+
+two:
+  profile_language: two
+  topic: two
+  target_level: 1
+  target_date: 2025-04-09

@@ -1,5 +1,34 @@
 Rails.application.routes.draw do
   devise_for :users
+  
+  # Profile routes
+  resource :profile, only: [:show, :edit, :update]
+  
+  # Languages and learning
+  resources :languages, only: [:index, :show] do
+    resources :profile_languages, only: [:create, :update, :destroy]
+    resources :vocabulary_entries, only: [:index]
+  end
+  
+  resources :profile_languages, only: [] do
+    resources :language_goals, only: [:create, :update, :destroy]
+    resources :user_vocabulary_entries, only: [:index]
+  end
+  
+  resources :topics, only: [:index, :show]
+  
+  # Vocabulary system
+  resources :vocabulary_entries, only: [:index, :show]
+  
+  resources :user_vocabulary_entries, only: [:index, :show, :create, :update] do
+    member do
+      post :record_review
+    end
+  end
+  
+  # Authentication and account routes
+  get "dashboard", to: "dashboard#index", as: :user_root
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

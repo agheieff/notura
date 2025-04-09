@@ -1,0 +1,209 @@
+{
+  "amo": {
+    "text": "amo",
+    "language_code": "la",
+    "word_class": "verb",
+    "translations": {
+      "en": ["love", "like", "am fond of"],
+      "es": ["amar", "querer"],
+      "fr": ["aimer"]
+    },
+    "ipa_transcriptions": ["ˈamoː"],
+    "definitions": [
+      "to love, like, be fond of",
+      "to be grateful, be thankful",
+      "to be in love with"
+    ],
+    "examples": [
+      "Amo te multum.",
+      "Caesar populum Romanum amavit."
+    ],
+    "etymology": "From Proto-Italic *amāō, from Proto-Indo-European *h₃emh₃- ('to grasp, hold').",
+    "word_forms": {
+      "indicative": {
+        "present": {
+          "1sg": "amo",
+          "2sg": "amas",
+          "3sg": "amat",
+          "1pl": "amamus",
+          "2pl": "amatis",
+          "3pl": "amant"
+        },
+        "imperfect": {
+          "1sg": "amabam",
+          "2sg": "amabas",
+          "3sg": "amabat",
+          "1pl": "amabamus",
+          "2pl": "amabatis",
+          "3pl": "amabant"
+        },
+        "future": {
+          "1sg": "amabo",
+          "2sg": "amabis",
+          "3sg": "amabit",
+          "1pl": "amabimus",
+          "2pl": "amabitis",
+          "3pl": "amabunt"
+        },
+        "perfect": {
+          "1sg": "amavi",
+          "2sg": "amavisti",
+          "3sg": "amavit",
+          "1pl": "amavimus",
+          "2pl": "amavistis",
+          "3pl": "amaverunt"
+        },
+        "pluperfect": {
+          "1sg": "amaveram",
+          "2sg": "amaveras",
+          "3sg": "amaverat",
+          "1pl": "amaveramus",
+          "2pl": "amaveratis",
+          "3pl": "amaverant"
+        },
+        "future_perfect": {
+          "1sg": "amavero",
+          "2sg": "amaveris",
+          "3sg": "amaverit",
+          "1pl": "amaverimus",
+          "2pl": "amaveritis",
+          "3pl": "amaverint"
+        }
+      },
+      "subjunctive": {
+        "present": {
+          "1sg": "amem",
+          "2sg": "ames",
+          "3sg": "amet",
+          "1pl": "amemus",
+          "2pl": "ametis",
+          "3pl": "ament"
+        },
+        "imperfect": {
+          "1sg": "amarem",
+          "2sg": "amares",
+          "3sg": "amaret",
+          "1pl": "amaremus",
+          "2pl": "amaretis",
+          "3pl": "amarent"
+        },
+        "perfect": {
+          "1sg": "amaverim",
+          "2sg": "amaveris",
+          "3sg": "amaverit",
+          "1pl": "amaverimus",
+          "2pl": "amaveritis",
+          "3pl": "amaverint"
+        },
+        "pluperfect": {
+          "1sg": "amavissem",
+          "2sg": "amavisses",
+          "3sg": "amavisset",
+          "1pl": "amavissemus",
+          "2pl": "amavissetis",
+          "3pl": "amavissent"
+        }
+      },
+      "imperative": {
+        "present": {
+          "2sg": "ama",
+          "2pl": "amate"
+        },
+        "future": {
+          "2sg": "amato",
+          "3sg": "amato",
+          "2pl": "amatote",
+          "3pl": "amanto"
+        }
+      },
+      "infinitive": {
+        "present": {
+          "active": "amare"
+        },
+        "perfect": {
+          "active": "amavisse"
+        },
+        "future": {
+          "active": "amaturum esse"
+        }
+      },
+      "participle": {
+        "present": {
+          "nominative": {
+            "masculine": {
+              "singular": "amans",
+              "plural": "amantes"
+            },
+            "feminine": {
+              "singular": "amans",
+              "plural": "amantes"
+            },
+            "neuter": {
+              "singular": "amans",
+              "plural": "amantia"
+            }
+          },
+          "genitive": {
+            "masculine": {
+              "singular": "amantis",
+              "plural": "amantium"
+            },
+            "feminine": {
+              "singular": "amantis",
+              "plural": "amantium"
+            },
+            "neuter": {
+              "singular": "amantis",
+              "plural": "amantium"
+            }
+          }
+        },
+        "future": {
+          "nominative": {
+            "masculine": {
+              "singular": "amaturus",
+              "plural": "amaturi"
+            },
+            "feminine": {
+              "singular": "amatura",
+              "plural": "amaturae"
+            },
+            "neuter": {
+              "singular": "amaturum",
+              "plural": "amatura"
+            }
+          }
+        },
+        "perfect": {
+          "nominative": {
+            "masculine": {
+              "singular": "amatus",
+              "plural": "amati"
+            },
+            "feminine": {
+              "singular": "amata",
+              "plural": "amatae"
+            },
+            "neuter": {
+              "singular": "amatum",
+              "plural": "amata"
+            }
+          }
+        }
+      },
+      "gerund": {
+        "genitive": "amandi",
+        "dative": "amando",
+        "accusative": "amandum",
+        "ablative": "amando"
+      },
+      "supine": {
+        "accusative": "amatum",
+        "ablative": "amatu"
+      }
+    },
+    "frequency": 75,
+    "difficulty": 2,
+    "tags": ["common", "regular", "first_conjugation"]
+  }
+}
